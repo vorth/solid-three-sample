@@ -1,9 +1,10 @@
 import { createSignal, useFrame, type Component } from 'solid-three'
-import { Mesh } from 'three'
+import { Color, Mesh } from 'three'
 
 const Box: Component = () => {
     let mesh: Mesh | undefined
     const [hovered, setHovered] = createSignal(false)
+    const color = () => new Color() .setStyle( (hovered() ? 'blue' : 'green') )
 
     useFrame(() => (mesh!.rotation.y += 0.01))
 
@@ -12,8 +13,8 @@ const Box: Component = () => {
             ref={mesh as any}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}>
-            <boxBufferGeometry />
-            <meshStandardMaterial color={hovered() ? 'blue' : 'green'} />
+            <boxGeometry />
+            <meshLambertMaterial color={color()} />
         </mesh>
     )
 }

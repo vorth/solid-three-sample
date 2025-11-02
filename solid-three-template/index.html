@@ -6,10 +6,43 @@
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
     <title>Solid App</title>
+    <style>
+      html,
+      body {
+        margin: 0; /* This is essential to avoid a small white border around the whole main div. */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+
+      #container {
+        position: absolute;
+        inset: 200px;
+        border: 1px solid black;
+      }
+
+      #heading {
+        text-align: center;
+        font-size: 24px;
+        margin: 16px;
+      }
+
+      #root {
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="container">
+      <div id="heading">Solid-three CSS sample</div>
+      <div id="root"></div>
+    </div>
 
     <script src="/src/index.tsx" type="module"></script>
   </body>

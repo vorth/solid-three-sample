@@ -1,7 +1,7 @@
 import { resolve } from 'path'
+import { DOMElements, SVGElements } from 'solid-js/web/dist/dev.cjs'
 import { defineConfig } from 'vite'
 import inspect from 'vite-plugin-inspect'
-import { DOMElements, SVGElements } from 'solid-js/web/dist/dev.cjs'
 import solidPlugin from 'vite-plugin-solid'
 
 export default defineConfig({

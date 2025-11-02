@@ -37,8 +37,9 @@
   },
   "dependencies": {
     "babel-preset-solid": "^1.7.3",
-    "solid-js": "^1.7.3",
-    "solid-three": "^0.1.0",
-    "three": "^0.152.2"
-  }
+    "solid-js": "^1.9.10",
+    "solid-three": "^0.2.0",
+    "three": "^0.180.0"
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

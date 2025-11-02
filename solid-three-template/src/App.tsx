@@ -4,7 +4,7 @@ import type { Component } from 'solid-js'
 
 const App: Component = () => {
     return (
-        <Canvas
+        <Canvas height={'300px'} width={'300px'}
             camera={{
                 position: [3, 3, 3],
             }}
