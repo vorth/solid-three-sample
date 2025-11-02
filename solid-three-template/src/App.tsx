@@ -1,10 +1,33 @@
-import { Canvas } from 'solid-three'
-import Box from './components/Box'
-import type { Component } from 'solid-js'
+import { createSignal, type Component } from 'solid-js'
+import { Canvas, createT, useFrame } from 'solid-three'
+import * as THREE from 'three'
+import { Color, Mesh } from 'three'
+
+// Create the T namespace
+const T = createT( THREE )
+
+const Box: Component = () => {
+    // let mesh
+    const [hovered, setHovered] = createSignal(false)
+    const color = () => new Color() .setStyle( (hovered() ? 'blue' : 'green') )
+
+    // useFrame(() => (mesh!.rotation.y += 0.01))
+
+    return (
+        <T.Mesh
+            // ref={mesh as any}
+            onPointerEnter={(e) => setHovered(true)}
+            onPointerLeave={(e) => setHovered(false)}>
+            <T.BoxGeometry />
+            <T.MeshLambertMaterial color={color()} />
+        </T.Mesh>
+    )
+}
 
 const App: Component = () => {
     return (
-        <Canvas height={'300px'} width={'300px'}
+        <Canvas
+            style={{ height: '300px', width: '300px' }}
             camera={{
                 position: [3, 3, 3],
             }}
@@ -13,8 +36,8 @@ const App: Component = () => {
             }}
             shadows>
             <Box />
-            <ambientLight />
-            <spotLight position={[0, 5, 10]} intensity={1} />
+            <T.AmbientLight />
+            <T.SpotLight position={[0, 5, 10]} intensity={1} />
         </Canvas>
     )
 }

@@ -1203,6 +1203,42 @@
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
 
+"@solid-primitives/event-listener@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/event-listener/-/event-listener-2.4.3.tgz#e09380222e38ed1b27f3d93bc72e85ba8507b3c0"
+  integrity sha512-h4VqkYFv6Gf+L7SQj+Y6puigL/5DIi7x5q07VZET7AWcS+9/G3WfIE9WheniHWJs51OEkRB43w6lDys5YeFceg==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.2"
+
+"@solid-primitives/resize-observer@^2.0.25":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/resize-observer/-/resize-observer-2.1.3.tgz#459db96f9c4a3d98a194d940c6e69f3ad4b2dad8"
+  integrity sha512-zBLje5E06TgOg93S7rGPldmhDnouNGhvfZVKOp+oG2XU8snA+GoCSSCz1M+jpNAg5Ek2EakU5UVQqL152WmdXQ==
+  dependencies:
+    "@solid-primitives/event-listener" "^2.4.3"
+    "@solid-primitives/rootless" "^1.5.2"
+    "@solid-primitives/static-store" "^0.1.2"
+    "@solid-primitives/utils" "^6.3.2"
+
+"@solid-primitives/rootless@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/rootless/-/rootless-1.5.2.tgz#0a9243a977672169cb8ed43bf4eba0c4d8eb5ac5"
+  integrity sha512-9HULb0QAzL2r47CCad0M+NKFtQ+LrGGNHZfteX/ThdGvKIg2o2GYhBooZubTCd/RTu2l2+Nw4s+dEfiDGvdrrQ==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.2"
+
+"@solid-primitives/static-store@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/static-store/-/static-store-0.1.2.tgz#acdbecee75f17a5b64416859082fca67eefbaaaa"
+  integrity sha512-ReK+5O38lJ7fT+L6mUFvUr6igFwHBESZF+2Ug842s7fvlVeBdIVEdTCErygff6w7uR6+jrr7J8jQo+cYrEq4Iw==
+  dependencies:
+    "@solid-primitives/utils" "^6.3.2"
+
+"@solid-primitives/utils@^6.3.2":
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/@solid-primitives/utils/-/utils-6.3.2.tgz#13d6126fc5a498965d7c45dd41c052e42dcfd7e1"
+  integrity sha512-hZ/M/qr25QOCcwDPOHtGjxTD8w2mNyVAYvcfgwzBHq2RwNqHNdDNsMZYap20+ruRwW4A3Cdkczyoz0TSxLCAPQ==
+
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.11"
   resolved "https://registry.npmjs.org/@types/babel-types/-/babel-types-7.0.11.tgz"
@@ -1282,13 +1318,6 @@
   version "0.17.0"
   resolved "https://registry.npmjs.org/@types/stats.js/-/stats.js-0.17.0.tgz"
   integrity sha512-9w+a7bR8PeB0dCT/HBULU2fMqf6BAzvKbxFboYhmDtDkKPiyXYbjoe2auwsXlEFI7CFNMF1dCv3dFH5Poy9R1w==
-
-"@types/three@0.149.0":
-  version "0.149.0"
-  resolved "https://registry.npmjs.org/@types/three/-/three-0.149.0.tgz"
-  integrity sha512-fgNBm9LWc65ER/W0cvoXdC0iMy7Ke9e2CONmEr6Jt8sDSY3sw4DgOubZfmdZ747dkPhbQrgRQAWwDEr2S/7IEg==
-  dependencies:
-    "@types/webxr" "*"
 
 "@types/three@^0.151.0":
   version "0.151.0"
@@ -1864,6 +1893,11 @@ de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/de-indent/-/de-indent-1.0.2.tgz"
   integrity sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==
+
+debounce@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-2.2.0.tgz#f895fa2fbdb579a0f0d3dcf5dde19657e50eaad5"
+  integrity sha512-Xks6RUDLZFdz8LIdR6q0MTH44k7FikOmnh5xkSjMig6ch45afc8sjTjRQf3P6ax8dMgcQrYO/AR2RGWURrruqw==
 
 debug@^3.2.7:
   version "3.2.7"
@@ -3732,13 +3766,13 @@ solid-refresh@^0.5.0:
     "@babel/helper-module-imports" "^7.18.6"
     "@babel/types" "^7.21.2"
 
-solid-three@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/solid-three/-/solid-three-0.2.0.tgz"
-  integrity sha512-CW3a8OFG8fGdEekdvri/Tx1wu1Mm6gUKI73bOxX0rA349WPoCYq3h1FNGjNS68ec5i2TvPpn7ZC4a3bq/S42fw==
+solid-three@^0.3.0-next.11:
+  version "0.3.0-next.11"
+  resolved "https://registry.yarnpkg.com/solid-three/-/solid-three-0.3.0-next.11.tgz#654a505617be6eafb76ba2c038ee2cdce98a035d"
+  integrity sha512-nai9Sf5zEO+v8JZGauB5PMt36qlj6wdef9OXfUHkh91pNDClr4i8hhhSjTEYxNzzD6nYk9Ov1Q+gh4zEgjKdsg==
   dependencies:
-    "@types/three" "0.149.0"
-    zustand "^3.7.2"
+    "@solid-primitives/resize-observer" "^2.0.25"
+    debounce "^2.1.0"
 
 source-map-js@^1.0.2:
   version "1.0.2"
@@ -4259,8 +4293,3 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
-
-zustand@^3.7.2:
-  version "3.7.2"
-  resolved "https://registry.npmjs.org/zustand/-/zustand-3.7.2.tgz"
-  integrity sha512-PIJDIZKtokhof+9+60cpockVOq05sJzHCriyvaLBmEJixseQ1a5Kdov6fWZfWOu5SK9c+FhH1jU0tntLxRJYMA==
