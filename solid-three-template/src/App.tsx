@@ -7,15 +7,15 @@ import { Color, Mesh } from 'three'
 const T = createT( THREE )
 
 const Box: Component = () => {
-    // let mesh
+    let mesh
     const [hovered, setHovered] = createSignal(false)
     const color = () => new Color() .setStyle( (hovered() ? 'blue' : 'green') )
 
-    // useFrame(() => (mesh!.rotation.y += 0.01))
+    useFrame(() => (mesh!.rotation.y += 0.01))
 
     return (
         <T.Mesh
-            // ref={mesh as any}
+            ref={mesh as any}
             onPointerEnter={(e) => setHovered(true)}
             onPointerLeave={(e) => setHovered(false)}>
             <T.BoxGeometry />
@@ -29,11 +29,9 @@ const App: Component = () => {
         <Canvas
             style={{ height: '300px', width: '300px' }}
             defaultCamera={{
-                position: [3, 3, 3],
+                position: [0, 0, 3],
             }}
-            gl={{
-                antialias: true,
-            }}
+            gl={{ args: [{ alpha: true, antialias: true }] }}
             shadows>
             <Box />
             <T.AmbientLight />
