@@ -28,7 +28,7 @@ const App: Component = () => {
     return (
         <Canvas
             style={{ height: '300px', width: '300px' }}
-            camera={{
+            defaultCamera={{
                 position: [3, 3, 3],
             }}
             gl={{
