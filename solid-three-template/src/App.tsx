@@ -32,6 +32,7 @@ const App: Component = () => {
                 position: [0, 0, 3],
             }}
             gl={{ args: [{ alpha: true, antialias: true }] }}
+        onClick={() => console.info("Canvas clicked (canvas propagation)")}
             shadows>
             <Box />
             <T.AmbientLight />
