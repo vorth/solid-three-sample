@@ -9,9 +9,9 @@ const T = createT( THREE )
 const Box: Component = () => {
     let mesh
     const [hovered, setHovered] = createSignal(false)
-    const color = () => new Color() .setStyle( (hovered() ? 'blue' : 'green') )
+    const color = () => new Color() .setStyle( (hovered() ? 'pink' : 'white') )
 
-    useFrame(() => (mesh!.rotation.y += 0.01))
+    useFrame(() => (mesh!.rotation.y += 0.001))
 
     return (
         <T.Mesh
@@ -27,7 +27,7 @@ const Box: Component = () => {
 const App: Component = () => {
     return (
         <Canvas
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: '400px', width: '600px' }}
             defaultCamera={{
                 position: [0, 0, 3],
             }}
